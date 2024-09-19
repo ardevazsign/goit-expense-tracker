@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import { Navigate } from 'react-router-dom';
-
 import { Filter } from 'components/filter/Filter';
+// Prettier-ignore
 import {
   selectFilter,
   selectStartDate,
@@ -14,7 +14,7 @@ import {
 } from '../../redux/transactions/operations';
 import { selectTransaction } from '../../redux/transactions/selectors';
 import { SectionTransaction } from 'components/sectionTransactionList/sectionTransaction';
-import { TotalExpense, TotalIncome } from 'shared/Total';
+import { TotalExpense, TotalIncome } from '../../shared/Total';
 import { selectIsLoggedIn } from '../../redux/auth/selectors';
 
 import {
@@ -37,14 +37,14 @@ import {
   PEr,
   DIV375,
   MainWr,
-} from 'pages/Income/Income.styled';
+} from '../Income/Income.styled';
 import svg from '../../images/Sprite.svg';
-import { FramerMotion } from 'helpers/framer-motion';
+import { FramerMotion } from '../../helpers/framer-motion';
 
 // edit modal
-import Modal from 'components/modal/Modal';
-import { useModal } from 'components/hooks/useModal';
-import OperationForm from 'shared/OperationForm/OperationForm';
+import Modal from '../../components/modal/Modal';
+import { useModal } from '../../components/hooks/useModal';
+import OperationForm from '../../shared/OperationForm/OperationForm';
 
 const Expense = () => {
   const dispatch = useDispatch();

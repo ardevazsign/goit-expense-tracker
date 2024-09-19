@@ -8,6 +8,7 @@ import { selectUser } from '../../redux/user/selectors';
 import { useModal } from 'components/hooks/useModal';
 import UserSetsModal from 'components/userSetsModal/UserSetsModal';
 import LogOutModal from 'components/logOutModal/LogOutModal';
+import Logo from '../Logo/Logo';
 
 import {
   HeaderLink,
@@ -144,13 +145,14 @@ const Header = () => {
     return (
       <UnAuthorisedHeader>
         <HeaderLink to="/">
-          <SiteIcon>
+          <Logo />
+          {/* <SiteIcon>
             <Symbols />
             <svg width={27} height={16}>
               <use xlinkHref="#site-icon" />
             </svg>
           </SiteIcon>
-          ExpenseTracker
+          ExpenseTracker */}
         </HeaderLink>
       </UnAuthorisedHeader>
     );

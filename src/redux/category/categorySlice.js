@@ -1,4 +1,5 @@
 import { toast } from 'react-toastify';
+import { createSlice, isAnyOf } from '@reduxjs/toolkit';
 import {
   createCategoryThunk,
   deleteCategoryThunk,
@@ -6,7 +7,7 @@ import {
   updateCategoryThunk,
 } from './operations';
 
-const { createSlice, isAnyOf } = require('@reduxjs/toolkit');
+// const { createSlice, isAnyOf } = require('@reduxjs/toolkit');
 
 const initialState = {
   categories: {

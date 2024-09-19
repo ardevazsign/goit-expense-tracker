@@ -1,13 +1,14 @@
 import { useDispatch } from 'react-redux';
 import { Suspense, lazy, useEffect } from 'react';
+//
 import { Route, Routes } from 'react-router-dom/dist';
 
 import { useAuth } from './hooks';
 import { refreshThunk } from '../redux/auth/operations';
-import Layout from './layout/Layout';
-import Loader from './loader/Loader';
+import SharedLayout from './SharedLayout/SharedLayout';
+import Loader from './Loader/Loader';
 
-const Home = lazy(() => import('pages/Home/Home'));
+const Home = lazy(() => import('pages/WelcomePage/WelcomePage'));
 const Register = lazy(() => import('pages/Register/Register'));
 const Login = lazy(() => import('pages/Login/Login'));
 const MainTransactionsPage = lazy(() =>
@@ -31,7 +32,7 @@ function App() {
         <Loader />
       ) : (
         <Routes>
-          <Route path="/" element={<Layout />}>
+          <Route path="/" element={<SharedLayout />}>
             <Route index element={<Home />} />
             <Route
               path="/transactions/:transactionsType"

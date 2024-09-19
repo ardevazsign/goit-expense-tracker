@@ -1,0 +1,19 @@
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 74px;
+  margin-top: 20px;
+}
+
+span {
+  color: #fafafa;
+  font-family: "Suisse Int'l";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  text-transform: uppercase;
+}

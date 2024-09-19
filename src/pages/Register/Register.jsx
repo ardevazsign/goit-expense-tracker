@@ -2,19 +2,20 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from '../../redux/auth/selectors';
 import RegisterForm from 'components/RegisterForm/RegisterForm';
-import { TotalIncome } from 'shared/Total';
+// import { TotalIncome } from 'shared/Total';
+import BgImageWrapper from 'components/BgImageWrapper/BgImageWrapper';
 
-import { AdaptDiv, H2 } from 'pages/Home/Home.styled';
+import { AdaptDiv, H2 } from 'pages/WelcomePage/WelcomePage.styled';
 import {
   PlugDivs,
-  TableDivs,
+  // TableDivs,
   Texts,
   WrapForm,
   WrapperS,
 } from './Register.styled';
-import { ImgAuth } from 'components/RegisterForm/RegisterForm.styled';
+// import { ImgAuth } from 'components/RegisterForm/RegisterForm.styled';
 
-import homeimg from '../../images/home/Rectangle 1x.png';
+// import homeimg from '../../images/home/Rectangle 1x.png';
 import { Navigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { selectUser } from '../../redux/user/selectors';
@@ -37,8 +38,9 @@ export default function Register() {
         <AdaptDiv>
           <WrapperS>
             <PlugDivs>
-              <TableDivs>{!isLoggedIn && <TotalIncome />}</TableDivs>
-              <ImgAuth src={homeimg} alt="Main " />
+              {/* <TableDivs>{!isLoggedIn && <TotalIncome />}</TableDivs>
+              <ImgAuth src={homeimg} alt="Main " /> */}
+              <BgImageWrapper />
             </PlugDivs>
             <WrapForm>
               <H2>Sign Up</H2>
