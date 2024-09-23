@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
-import fontBold from '../fonts/Suisse-Intl-Bold.ttf';
-import fontRegular from '../fonts/SuisseIntl-Regular.ttf';
+import fontBold from '../Assets/fonts/Suisse-Intl-Bold.ttf';
+import fontRegular from '../Assets/fonts/SuisseIntl-Regular.ttf';
 
 export const GlobalStyles = createGlobalStyle`
 @font-face {

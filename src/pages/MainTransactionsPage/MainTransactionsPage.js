@@ -1,16 +1,10 @@
-// base
 import React, { useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
-
-// selectors
 import { useDispatch, useSelector } from 'react-redux';
-import { selectIsLoggedIn } from '../../redux/auth/selectors';
-
-// components
-import { TotalIncome, TotalExpense } from 'shared/Total';
-import OperationForm from 'shared/OperationForm/OperationForm';
-import DoughnutComponent from 'components/doughnut/Doughnut';
-
+import { selectIsLoggedIn } from '../../redux/auth/authSelectors';
+import { TotalIncome, TotalExpense } from '../../Utils/Total';
+import OperationForm from 'Utils/Operations/OperationForm';
+import DoughnutComponent from 'components/TransactionsChart/TransactionsChart';
 // styled
 import {
   StyledHeaders,
@@ -21,11 +15,10 @@ import {
   StyledMain,
   StyledWrapper,
 } from './MainTransactionsPage.styled';
-
 // thunk's
-import { getTransactionsThunk } from '../../redux/transactions/operations';
+import { getTransactionsThunk } from '../../redux/transactions/transactionOperations';
 import { Navigate } from 'react-router-dom';
-import { FramerMotion } from 'helpers/framer-motion';
+import { FramerMotion } from 'Utils/framer-motion';
 
 const MainTransactionsPage = () => {
   // adaptive design

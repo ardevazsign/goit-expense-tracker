@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
-import { loginThunk } from '../../redux/auth/operations';
+import { loginThunk } from '../../redux/auth/authOperations';
 
 import {
   ButtonSign,
@@ -20,8 +20,8 @@ import {
   WrapPassword,
 } from 'components/RegisterForm/RegisterForm.styled';
 
-import { ReactComponent as ShowsIco } from '../../images/home/eye.svg';
-import { ReactComponent as HideIco } from '../../images/home/eye-off.svg';
+import { ReactComponent as ShowsIco } from '../../Assets/image/home/eye.svg';
+import { ReactComponent as HideIco } from '../../Assets/image/home/eye-off.svg';
 import { WrapBts } from './LoginForm.styled';
 
 export const LoginForm = () => {

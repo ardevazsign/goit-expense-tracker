@@ -1,15 +1,15 @@
 import React, { useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { selectLoading, selectUser } from '../../redux/user/selectors';
+import { selectLoading, selectUser } from '../../redux/user/userSelectors';
 import {
   changeAvatarThunk,
   deleteAvatarThunk,
   updateUserInfoThunk,
-} from '../../redux/user/operations';
+} from '../../redux/user/userOperations';
 import { CirclesWithBar } from 'react-loader-spinner';
 
-import Symbols from 'images/svg/Symbols';
+import Symbols from 'Assets/svg/Symbols';
 import {
   GrayButton,
   StyledBtnWrap,
@@ -29,6 +29,7 @@ const CURRENCIES = [
   { value: 'uah', label: '₴ UAH' },
   { value: 'usd', label: '$ USD' },
   { value: 'eur', label: '€ EUR' },
+  { value: 'php', label: '₱ PHP' },
 ];
 
 const UserSetsModal = ({ closeModal }) => {

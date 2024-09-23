@@ -1,10 +1,6 @@
 import { createSlice, isAnyOf } from '@reduxjs/toolkit';
-import {
-  loginThunk,
-  logoutThunk,
-  refreshThunk,
-  registerThunk,
-} from './operations';
+//prettier-ignore
+import { loginThunk, logoutThunk, refreshThunk, registerThunk } from './authOperations';
 
 const initialState = {
   accessToken: '',

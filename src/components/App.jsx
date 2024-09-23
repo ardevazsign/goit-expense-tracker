@@ -1,22 +1,22 @@
 import { useDispatch } from 'react-redux';
 import { Suspense, lazy, useEffect } from 'react';
-//
 import { Route, Routes } from 'react-router-dom/dist';
-
-import { useAuth } from './hooks';
-import { refreshThunk } from '../redux/auth/operations';
+import { useAuth } from '../hooks';
+import { refreshThunk } from '../redux/auth/authOperations';
 import SharedLayout from './SharedLayout/SharedLayout';
 import Loader from './Loader/Loader';
 
+//
 const Home = lazy(() => import('pages/WelcomePage/WelcomePage'));
 const Register = lazy(() => import('pages/Register/Register'));
 const Login = lazy(() => import('pages/Login/Login'));
-const MainTransactionsPage = lazy(() =>
+const MainTransactions = lazy(() =>
   import('pages/MainTransactionsPage/MainTransactionsPage')
 );
-const Expense = lazy(() => import('pages/Expense/Expense'));
-const Income = lazy(() => import('pages/Income/Income'));
-const NotFound = lazy(() => import('pages/NotFoundPage/NotFound'));
+const TransactionsHistory = lazy(() =>
+  import('pages/TransactionHistory/TransactionsHistoryPage')
+);
+const NotFound = lazy(() => import('../routes/NotFoundPage/NotFound'));
 
 function App() {
   const dispatch = useDispatch();
@@ -36,10 +36,13 @@ function App() {
             <Route index element={<Home />} />
             <Route
               path="/transactions/:transactionsType"
-              element={<MainTransactionsPage />}
+              element={<MainTransactions />}
             />
-            <Route path="/expenses" element={<Expense />} />
-            <Route path="/incomes" element={<Income />} />
+
+            <Route
+              path="/transactions/expenses"
+              element={<TransactionsHistory />}
+            />
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
           </Route>

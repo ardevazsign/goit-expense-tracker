@@ -1,12 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
-import {
-  getCurrentUserThunk,
-  updateUserInfoThunk,
-  changeAvatarThunk,
-  deleteAvatarThunk,
-} from './operations.js';
-import { loginThunk, registerThunk } from '../auth/operations.js';
-import { createTransactionThunk } from '../transactions/operations.js';
+//prettier-ignore
+import { getCurrentUserThunk, updateUserInfoThunk, changeAvatarThunk, deleteAvatarThunk } from './userOperations.js';
+import { loginThunk, registerThunk } from '../auth/authOperations.js';
+import { createTransactionThunk } from '../transactions/transactionOperations.js';
 
 const initialState = {
   user: {

@@ -9,9 +9,9 @@ import {
   createCategoryThunk,
   deleteCategoryThunk,
   updateCategoryThunk,
-} from '../../../redux/category/operations';
-import { selectCategories } from '../../../redux/category/selectors';
-import { selectIsLoggedIn } from '../../../redux/auth/selectors';
+} from '../../../redux/category/categoryOperations';
+import { selectCategories } from '../../../redux/category/categorySelectors';
+import { selectIsLoggedIn } from '../../../redux/auth/authSelectors';
 import {
   CategoriesDiv,
   CategoriesList,
@@ -21,7 +21,7 @@ import {
 } from './AllCategories.styled.js';
 import { CategoryForm } from '../categoryForm/CategoryForm';
 import { OneCategory } from 'components/categories/oneCategory/OneCategory.jsx';
-import { schemaCategoryInput } from 'helpers/schemas';
+import { schemaCategoryInput } from 'Utils/schemas';
 
 export const AllCategories = ({
   type,

@@ -1,13 +1,7 @@
 import { toast } from 'react-toastify';
 import { createSlice, isAnyOf } from '@reduxjs/toolkit';
-import {
-  createCategoryThunk,
-  deleteCategoryThunk,
-  getCategoriesThunk,
-  updateCategoryThunk,
-} from './operations';
-
-// const { createSlice, isAnyOf } = require('@reduxjs/toolkit');
+//prettier-ignore
+import {createCategoryThunk, deleteCategoryThunk, getCategoriesThunk, updateCategoryThunk } from './categoryOperations';
 
 const initialState = {
   categories: {

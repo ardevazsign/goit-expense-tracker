@@ -1,13 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
-
-import {
-  createTransactionThunk,
-  getTransactionsThunk,
-  deleteTransactionThunk,
-  updateTransactionThunk,
-} from './operations';
-
-
+//prettier-ignore
+import { createTransactionThunk, getTransactionsThunk, deleteTransactionThunk, updateTransactionThunk } from './transactionOperations';
 import { toast } from 'react-toastify';
 
 const initialState = {
@@ -31,12 +24,12 @@ const transactionsSlice = createSlice({
         if (action?.payload?.type === 'expenses') {
           state.transactions.push(action.payload);
         }
-        toast.success('Transaction added')
+        toast.success('Transaction added');
       })
       .addCase(createTransactionThunk.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
-        toast.error('Oops, something went wrong, try again later')
+        toast.error('Oops, something went wrong, try again later');
       })
       .addCase(getTransactionsThunk.pending, state => {
         state.loading = true;
@@ -68,12 +61,14 @@ const transactionsSlice = createSlice({
         state.loading = true;
       })
       .addCase(updateTransactionThunk.fulfilled, (state, action) => {
-        const itemIndex = state.transactions.findIndex(item => item._id === action.payload._id);
+        const itemIndex = state.transactions.findIndex(
+          item => item._id === action.payload._id
+        );
         if (itemIndex !== -1) {
           state.loading = false;
           state.transactions?.splice(itemIndex, 1, action.payload);
         }
-        toast.success('Transaction updated')
+        toast.success('Transaction updated');
       })
       .addCase(updateTransactionThunk.rejected, (state, action) => {
         state.loading = false;

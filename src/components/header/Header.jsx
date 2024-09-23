@@ -3,9 +3,9 @@ import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 
 import Modal from 'components/modal/Modal';
-import { selectIsLoggedIn } from '../../redux/auth/selectors';
-import { selectUser } from '../../redux/user/selectors';
-import { useModal } from 'components/hooks/useModal';
+import { selectIsLoggedIn } from '../../redux/auth/authSelectors';
+import { selectUser } from '../../redux/user/userSelectors';
+import { useModal } from 'hooks/useModal';
 import UserSetsModal from 'components/userSetsModal/UserSetsModal';
 import LogOutModal from 'components/logOutModal/LogOutModal';
 import Logo from '../Logo/Logo';
@@ -14,7 +14,6 @@ import {
   HeaderLink,
   HeaderAuthorised,
   BurgerBtn,
-  SiteIcon,
   MobileMenu,
   CloseBtn,
   MenuHeader,
@@ -40,9 +39,8 @@ import {
   HeaderBurgerMenu,
   UsualBackDrop,
 } from './headerStyled';
-import Symbols from 'images/svg/Symbols';
 
-const Header = () => {
+const Header = ({ handleSectionChange, activeSection }) => {
   const location = useLocation();
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const { name, avatarUrl } = useSelector(selectUser);
@@ -146,13 +144,6 @@ const Header = () => {
       <UnAuthorisedHeader>
         <HeaderLink to="/">
           <Logo />
-          {/* <SiteIcon>
-            <Symbols />
-            <svg width={27} height={16}>
-              <use xlinkHref="#site-icon" />
-            </svg>
-          </SiteIcon>
-          ExpenseTracker */}
         </HeaderLink>
       </UnAuthorisedHeader>
     );
@@ -164,20 +155,24 @@ const Header = () => {
         style={hideOrHeaderProfileSettings}
       />
       <HeaderLink to="/transactions/expenses">
-        <SiteIcon>
-          <Symbols />
-          <svg width={27} height={16}>
-            <use xlinkHref="#site-icon" />
-          </svg>
-        </SiteIcon>
-        ExpenseTracker
+        <Logo />
       </HeaderLink>
 
       <LinksContainer>
-        <ExpensesLink to="/expenses" state={{ from: location }}>
+        <ExpensesLink
+          to="/transactions/expenses"
+          onClick={() => handleSectionChange('expenses')}
+          className={activeSection === 'expenses' ? 'active' : ''}
+          state={{ from: location }}
+        >
           All Expense
         </ExpensesLink>
-        <IncomeLink to="/incomes" state={{ from: location }}>
+        <IncomeLink
+          to="/transactions/incomes"
+          onClick={() => handleSectionChange('incomes')}
+          className={activeSection === 'incomes' ? 'active' : ''}
+          state={{ from: location }}
+        >
           All Income
         </IncomeLink>
       </LinksContainer>

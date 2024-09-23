@@ -1,21 +1,18 @@
 import React from 'react';
-import { CirclesWithBar } from 'react-loader-spinner';
+import { ThreeCircles } from 'react-loader-spinner';
 import { StyledLoaderWrapper } from './Loader.styled';
 
 const Loader = () => {
   return (
     <StyledLoaderWrapper>
-      <CirclesWithBar
+      <ThreeCircles
+        visible={true}
         height="100"
         width="100"
         color="#4fa94d"
+        ariaLabel="three-circles-loading"
         wrapperStyle={{}}
         wrapperClass=""
-        visible={true}
-        outerCircleColor=""
-        innerCircleColor=""
-        barColor=""
-        ariaLabel="circles-with-bar-loading"
       />
     </StyledLoaderWrapper>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import BgImage from '../../images/home/Rectangle 1x.png';
+import BgImage from '../../Assets/image/home/Rectangle 1x.png';
 import DecorationTab from '../DecorationTab/DecorationTab';
 import css from './BgImageWrapper.module.css';
 

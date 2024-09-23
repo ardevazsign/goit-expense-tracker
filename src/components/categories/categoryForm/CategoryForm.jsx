@@ -8,7 +8,7 @@ import {
   StyledInput,
   SubmitForm,
 } from './CategoryForm.styled';
-import { FramerMotion } from 'helpers/framer-motion';
+import { FramerMotion } from 'Utils/framer-motion';
 
 export const CategoryForm = ({
   isEditing,

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { StyledLi } from './StyledOneCategory';
-import Symbols from 'images/svg/Symbols';
+import Symbols from 'Assets/svg/Symbols';
 
 export const OneCategory = ({
   setCategoryId,

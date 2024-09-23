@@ -1,17 +1,12 @@
-// base
 import React from 'react';
 import { useParams } from 'react-router';
-
+import { Controller } from 'react-hook-form';
+// dependencies
 // modal
 import Modal from 'components/modal/Modal';
-import { useModal } from 'components/hooks/useModal';
-
-// form
-import { Controller } from 'react-hook-form';
-
+import { useModal } from 'hooks/useModal';
 // components
 import { AllCategories } from 'components/categories/allCategories/AllCategories';
-
 // styled
 import {
   StyledInputWrapper,

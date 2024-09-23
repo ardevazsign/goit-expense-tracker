@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 
-export const DIV = styled.div`
+// SectionContainer,
+//   CategoryTxt,
+//   CommentTxt,
+//   DateTxt,
+//   TimeTxt,
+//   SumTxt,
+
+export const SectionContainer = styled.div`
   display: flex;
 
   margin-bottom: 32px;
@@ -25,7 +32,7 @@ export const DIV = styled.div`
   }
 `;
 
-export const P1 = styled.p`
+export const CategoryTxt = styled.p`
   width: 53px;
   margin: 0 20px 0 20px;
   @media (min-width: 768px) {
@@ -37,7 +44,7 @@ export const P1 = styled.p`
   }
 `;
 
-export const P2 = styled.p`
+export const CommentTxt = styled.p`
   width: 60px;
 
   margin-right: 10px;
@@ -50,7 +57,7 @@ export const P2 = styled.p`
   }
 `;
 
-export const P3 = styled.p`
+export const DateTxt = styled.p`
   width: 30px;
   margin-right: 36px;
   @media (min-width: 768px) {
@@ -62,7 +69,7 @@ export const P3 = styled.p`
   }
 `;
 
-export const P4 = styled.p`
+export const TimeTxt = styled.p`
   width: 30px;
   margin-right: 20px;
   @media (min-width: 768px) {
@@ -74,7 +81,7 @@ export const P4 = styled.p`
   }
 `;
 
-export const P5 = styled.p`
+export const SumTxt = styled.p`
   width: 30px;
   margin-right: 80px;
   @media (min-width: 768px) {

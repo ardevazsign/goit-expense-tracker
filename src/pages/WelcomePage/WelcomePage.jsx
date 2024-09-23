@@ -1,20 +1,13 @@
 import { useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
-import { selectIsLoggedIn } from '../../redux/auth/selectors';
+import { selectIsLoggedIn } from '../../redux/auth/authSelectors';
 import WelcomeHome from 'components/WelcomeHome/WelcomeHome';
-// import { TotalIncome } from 'shared/Total';
-import { AdaptDiv, PlugDiv, Wrapper } from './WelcomePage.styled';
+import { TotalIncome } from '../../Utils/Total';
+import { AdaptDiv, PlugDiv, Wrapper, TableDiv } from './WelcomePage.styled';
 import BgImageWrapper from 'components/BgImageWrapper/BgImageWrapper';
 
 const WelcomePage = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
-  // const sessionError = useSelector(selectSessionError);
-
-  // useEffect(() => {
-  //   if (isLoggedIn && sessionError) {
-  //     toast.error('Session is expired. Please, log in again');
-  //   }
-  // }, [sessionError, isLoggedIn]);
 
   if (isLoggedIn) {
     return <Navigate to="/transactions/expenses" />;
@@ -24,8 +17,7 @@ const WelcomePage = () => {
     <AdaptDiv>
       <Wrapper>
         <PlugDiv>
-          {/* <TableDiv>{!isLoggedIn && {' <TotalIncome />'} }</TableDiv> */}
-          {/* <Img src={ } alt="Main " /> */}
+          <TableDiv>{!isLoggedIn && <TotalIncome />}</TableDiv>
           <BgImageWrapper />
         </PlugDiv>
         <div>

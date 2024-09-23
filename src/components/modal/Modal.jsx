@@ -1,8 +1,8 @@
 import ReactDOM from 'react-dom';
 import React, { useCallback, useEffect } from 'react';
 
-import { FramerMotion } from 'helpers/framer-motion';
-import Symbols from 'images/svg/Symbols';
+import { FramerMotion } from 'Utils/framer-motion';
+import Symbols from 'Assets/svg/Symbols';
 
 import {
   CloseButton,
