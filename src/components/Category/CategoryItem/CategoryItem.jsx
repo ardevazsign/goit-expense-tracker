@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { StyledLi } from './StyledOneCategory';
+import { CategoryListItem } from './CategoryItem.styled';
 import Symbols from 'Assets/svg/Symbols';
 
-export const OneCategory = ({
+export const CategoryItem = ({
   setCategoryId,
   closeModal,
   chooseCategories,
@@ -18,7 +18,7 @@ export const OneCategory = ({
     closeModal();
   };
   return (
-    <StyledLi>
+    <CategoryListItem>
       <p>{categoryName}</p>
       <div>
         <Symbols />
@@ -42,6 +42,6 @@ export const OneCategory = ({
           </svg>
         </button>
       </div>
-    </StyledLi>
+    </CategoryListItem>
   );
 };

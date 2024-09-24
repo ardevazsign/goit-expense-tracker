@@ -12,18 +12,18 @@ import {
 } from '../../../redux/category/categoryOperations';
 import { selectCategories } from '../../../redux/category/categorySelectors';
 import { selectIsLoggedIn } from '../../../redux/auth/authSelectors';
-import {
-  CategoriesDiv,
-  CategoriesList,
-  CategoriesPlugP,
-  AllCategoriesP,
-  TransactionType,
-} from './AllCategories.styled.js';
-import { CategoryForm } from '../categoryForm/CategoryForm';
-import { OneCategory } from 'components/categories/oneCategory/OneCategory.jsx';
+import { CategoryForm } from '../CategoryForm/CategoryForm';
+import { CategoryItem } from 'components/Category/CategoryItem/CategoryItem.jsx';
 import { schemaCategoryInput } from 'Utils/schemas';
+import {
+  AllCategoryText,
+  CategoryContainer,
+  CategoryList,
+  CategoryTransactionType,
+  CategoryPlugInfo,
+} from './AllCategory.styled';
 
-export const AllCategories = ({
+export const AllCategory = ({
   type,
   chooseCategories,
   closeModal,
@@ -128,13 +128,13 @@ export const AllCategories = ({
   };
 
   return (
-    <CategoriesDiv>
-      <TransactionType>{type}</TransactionType>
-      <AllCategoriesP>All categories</AllCategoriesP>
-      <CategoriesList ref={categoriesListRef}>
+    <CategoryContainer>
+      <CategoryTransactionType>{type}</CategoryTransactionType>
+      <AllCategoryText>All categories</AllCategoryText>
+      <CategoryList ref={categoriesListRef}>
         {categories[type]?.length ? (
           categories[type]?.map(category => (
-            <OneCategory
+            <CategoryItem
               setCategoryId={setCategoryId}
               closeModal={closeModal}
               chooseCategories={chooseCategories}
@@ -145,9 +145,9 @@ export const AllCategories = ({
             />
           ))
         ) : (
-          <CategoriesPlugP>There are no categories yet😭</CategoriesPlugP>
+          <CategoryPlugInfo>There are no categories yet😭</CategoryPlugInfo>
         )}
-      </CategoriesList>
+      </CategoryList>
       <CategoryForm
         isEditing={isEditing}
         currentCategory={currentCategory}
@@ -157,6 +157,6 @@ export const AllCategories = ({
         errors={errors}
         onCancel={onCancel}
       />
-    </CategoriesDiv>
+    </CategoryContainer>
   );
 };

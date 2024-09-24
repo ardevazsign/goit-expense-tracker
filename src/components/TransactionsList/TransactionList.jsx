@@ -1,14 +1,27 @@
 import React, { useState, useEffect } from 'react';
+//
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import { Navigate } from 'react-router-dom';
 import svg from '../../Assets/svg/Sprite.svg';
 // prettier-ignore
-import { deleteTransactionThunk, getTransactionsThunk } from '../../redux/transactions/transactionOperations';
+import {
+  deleteTransactionThunk,
+  getTransactionsThunk,
+} from '../../redux/transactions/transactionOperations';
+//
 // prettier-ignore
-import { selectFilter, selectStartDate } from '../../redux/filter/filterSelector';
+import {
+  selectFilter,
+  selectStartDate
+} from '../../redux/filter/filterSelector';
+// ;
 import { selectIsLoggedIn } from '../../redux/auth/authSelectors';
 import { selectTransaction } from '../../redux/transactions/transactionSelectors';
+import Modal from 'components/Modal/Modal';
+import { useModal } from '../../hooks/useModal';
+import OperationForm from '../../Utils/Operations/OperationForm';
+
 // Styles
 import {
   TransactionsContainer,
@@ -21,11 +34,6 @@ import {
   EditButton,
   DeleteButton,
 } from './TransactionsList.styled';
-
-// Modals Components
-import Modal from 'components/modal/Modal';
-import { useModal } from '../../hooks/useModal';
-import OperationForm from 'Utils/Operations/OperationForm';
 
 function TransactionList() {
   const filter = useSelector(selectFilter);
@@ -44,7 +52,12 @@ function TransactionList() {
 
   useEffect(() => {
     //
-    dispatch(getTransactionsThunk({ type: 'expenses', date: formattedDate }));
+    dispatch(
+      getTransactionsThunk({
+        type: 'expenses',
+        date: formattedDate,
+      })
+    );
   }, [dispatch, filter, formattedDate, date]);
 
   const handleDelete = (transactionId, transactionComment) => {

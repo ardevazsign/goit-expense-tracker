@@ -7,7 +7,7 @@ import {
   deleteAvatarThunk,
   updateUserInfoThunk,
 } from '../../redux/user/userOperations';
-import { CirclesWithBar } from 'react-loader-spinner';
+import { ThreeCircles } from 'react-loader-spinner';
 
 import Symbols from 'Assets/svg/Symbols';
 import {
@@ -104,7 +104,7 @@ const UserSetsModal = ({ closeModal }) => {
           <StyledSvgWrap>
             {loading ? (
               <StyledLoader>
-                <CirclesWithBar />
+                <ThreeCircles />
               </StyledLoader>
             ) : (
               <img src={user.avatarUrl} alt="user avatar" />
@@ -115,7 +115,7 @@ const UserSetsModal = ({ closeModal }) => {
             <Symbols />
             {loading ? (
               <StyledLoader>
-                <CirclesWithBar />
+                <ThreeCircles />
               </StyledLoader>
             ) : (
               <svg width={38} height={38}>

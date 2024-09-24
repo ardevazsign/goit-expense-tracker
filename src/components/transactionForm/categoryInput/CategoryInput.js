@@ -3,10 +3,10 @@ import { useParams } from 'react-router';
 import { Controller } from 'react-hook-form';
 // dependencies
 // modal
-import Modal from 'components/modal/Modal';
+import Modal from 'components/Modal/Modal';
 import { useModal } from 'hooks/useModal';
 // components
-import { AllCategories } from 'components/categories/allCategories/AllCategories';
+import { AllCategory } from 'components/Category/AllCategory/AllCategory';
 // styled
 import {
   StyledInputWrapper,
@@ -44,7 +44,7 @@ const CategoryInput = ({ control, setValue, setCategoryId, type }) => {
           {isOpened ? (
             <Modal
               children={
-                <AllCategories
+                <AllCategory
                   type={type ? type : transactionsType}
                   chooseCategories={handleSetCategory}
                   closeModal={closeModal}

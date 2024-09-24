@@ -1,20 +1,25 @@
-.image {
+import styled from 'styled-components';
+
+export const BackgroundImage = styled.div`
+  background-color: #000;
+  border-radius: 20px;
+`;
+
+export const HomeBgImage = styled.img`
   display: block;
   width: 611px;
   height: 568px;
   flex-shrink: 0;
   border-radius: 20px;
-  background: lightgray -210.655px -9.352px / 144.403%
-    103.776% no-repeat;
-}
-
-.imageContainer {
+  background: lightgray -210.655px -9.352px / 144.403% 103.776% no-repeat;
+`;
+export const ImageContainer = styled.div`
   display: flex;
   position: relative;
-}
+`;
 
-.decorationTab {
-  position: absolute;
+export const TabDecoration = styled.div`
+ position: absolute;
   left: -50px;
   top: 315px;
   animation-duration: 8s;
@@ -37,4 +42,5 @@
   100% {
     transform: translateX(0);
   }
-}
+ 
+`;

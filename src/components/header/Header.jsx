@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 
-import Modal from 'components/modal/Modal';
+import Modal from 'components/Modal/Modal';
 import { selectIsLoggedIn } from '../../redux/auth/authSelectors';
 import { selectUser } from '../../redux/user/userSelectors';
 import { useModal } from 'hooks/useModal';
 import UserSetsModal from 'components/userSetsModal/UserSetsModal';
-import LogOutModal from 'components/logOutModal/LogOutModal';
+import LogOutModal from 'components/LogOutModal/LogOutModal';
 import Logo from '../Logo/Logo';
 
 import {
@@ -38,9 +38,9 @@ import {
   DarkBackDrop,
   HeaderBurgerMenu,
   UsualBackDrop,
-} from './headerStyled';
+} from './Header.Styled';
 
-const Header = ({ handleSectionChange, activeSection }) => {
+const Header = () => {
   const location = useLocation();
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const { name, avatarUrl } = useSelector(selectUser);
@@ -160,17 +160,17 @@ const Header = ({ handleSectionChange, activeSection }) => {
 
       <LinksContainer>
         <ExpensesLink
-          to="/transactions/expenses"
-          onClick={() => handleSectionChange('expenses')}
-          className={activeSection === 'expenses' ? 'active' : ''}
+          to="/expenses"
+          // onClick={() => handleSectionChange('expenses')}
+          // className={activeSection === 'expenses' ? 'active' : ''}
           state={{ from: location }}
         >
           All Expense
         </ExpensesLink>
         <IncomeLink
-          to="/transactions/incomes"
-          onClick={() => handleSectionChange('incomes')}
-          className={activeSection === 'incomes' ? 'active' : ''}
+          to="/incomes"
+          // onClick={() => handleSectionChange('incomes')}
+          // className={activeSection === 'incomes' ? 'active' : ''}
           state={{ from: location }}
         >
           All Income

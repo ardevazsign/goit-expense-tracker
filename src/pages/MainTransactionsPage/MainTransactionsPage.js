@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectIsLoggedIn } from '../../redux/auth/authSelectors';
 import { TotalIncome, TotalExpense } from '../../Utils/Total';
 import OperationForm from 'Utils/Operations/OperationForm';
-import DoughnutComponent from 'components/TransactionsChart/TransactionsChart';
+import TransactionsChart from 'components/TransactionsChart/TransactionsChart';
 // styled
 import {
   StyledHeaders,
@@ -67,7 +67,7 @@ const MainTransactionsPage = () => {
           </FramerMotion>
           <FramerMotion $variant="doughnut">
             <StyledMain>
-              <DoughnutComponent />
+              <TransactionsChart />
             </StyledMain>
           </FramerMotion>
         </>
@@ -92,7 +92,7 @@ const MainTransactionsPage = () => {
                 </li>
               </StyledTotalUl>
               <StyledMain>
-                <DoughnutComponent />
+                <TransactionsChart />
               </StyledMain>
             </StyledWrapper>
           </FramerMotion>

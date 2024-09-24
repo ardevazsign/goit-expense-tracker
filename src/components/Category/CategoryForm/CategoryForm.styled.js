@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const SubmitForm = styled.form`
+export const CategoryMainForm = styled.form`
   @media (max-width: 767px) {
     margin: 0px 20px;
   }
@@ -14,7 +14,7 @@ export const SubmitForm = styled.form`
   margin-bottom: 10px;
 `;
 
-export const StyledInput = styled.input`
+export const CategoryInput = styled.input`
   @media (max-width: 767px) {
     font-size: 14px;
     padding-left: 14px;
@@ -45,7 +45,7 @@ export const StyledInput = styled.input`
   }
 `;
 
-export const InputTitleP = styled.p`
+export const InputInfo = styled.p`
   @media (max-width: 767px) {
     font-size: 14px;
   }
@@ -138,7 +138,7 @@ export const CancelButton = styled.button`
   }
 `;
 
-export const StyledErrorP = styled.p`
+export const ErrorInfoText = styled.p`
   color: #e74a3b;
   position: absolute;
   top: 114%;

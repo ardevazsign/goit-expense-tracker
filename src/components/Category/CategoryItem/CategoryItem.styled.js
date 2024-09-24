@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledLi = styled.li`
+export const CategoryListItem = styled.li`
   @media (max-width: 767px) {
     padding-left: 20px;
   }

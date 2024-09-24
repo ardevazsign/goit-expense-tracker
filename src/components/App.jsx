@@ -13,8 +13,11 @@ const Login = lazy(() => import('pages/Login/Login'));
 const MainTransactions = lazy(() =>
   import('pages/MainTransactionsPage/MainTransactionsPage')
 );
-const TransactionsHistory = lazy(() =>
-  import('pages/TransactionHistory/TransactionsHistoryPage')
+const TransactionsHistoryEpenses = lazy(() =>
+  import('pages/TransactionHistory/ExpenseSection/ExpenseSection')
+);
+const TransactionsHistoryIncomes = lazy(() =>
+  import('pages/TransactionHistory/IncomeSection/IncomeSection')
 );
 const NotFound = lazy(() => import('../routes/NotFoundPage/NotFound'));
 
@@ -38,11 +41,8 @@ function App() {
               path="/transactions/:transactionsType"
               element={<MainTransactions />}
             />
-
-            <Route
-              path="/transactions/expenses"
-              element={<TransactionsHistory />}
-            />
+            <Route path="/expenses" element={<TransactionsHistoryEpenses />} />
+            <Route path="/incomes" element={<TransactionsHistoryIncomes />} />
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
           </Route>

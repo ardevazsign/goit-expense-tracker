@@ -1,25 +1,34 @@
 import React from 'react';
 import arrow from '../../Assets/svg/arrow.svg';
-import css from './DecorationTab.module.css';
+import {
+  ArrowContainer,
+  Balance,
+  BalanceHolder,
+  DecorContainer,
+  DecorTitle,
+  InfoContainer,
+  Percentage,
+  PercentageHolder,
+} from './DecorativeTab.styled';
 
-function DecorationTab({ className }) {
+function DecorationTab() {
   return (
-    <div className={className}>
-      <div className={css.container}>
-        <div className={css.arrowContainer}>
-          <img src={arrow} alt="arrow" />
-        </div>
-        <div className={css.infoContainer}>
-          <p className={css.paragraph}>Your Balance</p>
-          <div className={css.balanceContainer}>
-            <span className={css.balance}>$632.000</span>
-            <div className={css.percentageContainer}>
-              <span className={css.percentage}>+1.29%</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    // <div className={className}>
+    <DecorContainer>
+      <ArrowContainer>
+        <img src={arrow} alt="arrow" />
+      </ArrowContainer>
+      <InfoContainer>
+        <DecorTitle>Your Balance</DecorTitle>
+        <BalanceHolder>
+          <Balance>$632.000</Balance>
+          <PercentageHolder>
+            <Percentage>+1.29%</Percentage>
+          </PercentageHolder>
+        </BalanceHolder>
+      </InfoContainer>
+    </DecorContainer>
+    // </div>
   );
 }
 

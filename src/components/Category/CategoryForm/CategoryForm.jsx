@@ -3,10 +3,10 @@ import React from 'react';
 import {
   CancelButton,
   EditButton,
-  InputTitleP,
-  StyledErrorP,
-  StyledInput,
-  SubmitForm,
+  InputInfo,
+  ErrorInfoText,
+  CategoryMainForm,
+  CategoryInput,
 } from './CategoryForm.styled';
 import { FramerMotion } from 'Utils/framer-motion';
 
@@ -20,11 +20,11 @@ export const CategoryForm = ({
   register,
 }) => (
   <FramerMotion $variant="categoryForm">
-    <SubmitForm action="" onSubmit={handleSubmit(submit)}>
-      <InputTitleP $error={errors?.categoryName}>
+    <CategoryMainForm action="" onSubmit={handleSubmit(submit)}>
+      <InputInfo $error={errors?.categoryName}>
         {isEditing ? 'Edit category' : 'New category'}
-      </InputTitleP>
-      <StyledInput
+      </InputInfo>
+      <CategoryInput
         type="text"
         placeholder="Enter the text"
         {...register('categoryName')}
@@ -36,9 +36,9 @@ export const CategoryForm = ({
         {isEditing ? 'Edit' : 'Add'}
       </EditButton>
       {isEditing && <CancelButton onClick={onCancel}>Cancel</CancelButton>}
-    </SubmitForm>
+    </CategoryMainForm>
     {errors?.categoryName && (
-      <StyledErrorP>{errors.categoryName.message}</StyledErrorP>
+      <ErrorInfoText>{errors.categoryName.message}</ErrorInfoText>
     )}
   </FramerMotion>
 );

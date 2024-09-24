@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const CategoriesDiv = styled.div`
+export const CategoryContainer = styled.div`
   @media (max-width: 767px) {
     max-width: 335px;
     max-height: 400px;
@@ -15,7 +15,7 @@ export const CategoriesDiv = styled.div`
   position: relative;
 `;
 
-export const TransactionType = styled.h2`
+export const CategoryTransactionType = styled.h2`
   text-transform: capitalize;
   @media (max-width: 767px) {
     font-size: 24px;
@@ -32,7 +32,7 @@ export const TransactionType = styled.h2`
   margin-left: 40px;
 `;
 
-export const AllCategoriesP = styled.p`
+export const AllCategoryText = styled.p`
   @media (max-width: 767px) {
     font-size: 12px;
     margin-left: 20px;
@@ -46,7 +46,7 @@ export const AllCategoriesP = styled.p`
   margin-left: 40px;
 `;
 
-export const CategoriesList = styled.ul`
+export const CategoryList = styled.ul`
   max-height: 150px;
   overflow-y: auto;
   margin-bottom: 28px;
@@ -62,7 +62,7 @@ export const CategoriesList = styled.ul`
   }
 `;
 
-export const CategoriesPlugP = styled.p`
+export const CategoryPlugInfo = styled.p`
   color: rgba(250, 250, 250, 0.4);
   font-size: 16px;
   font-style: normal;
