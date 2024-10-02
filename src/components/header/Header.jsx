@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 
-import Modal from 'components/Modal/Modal';
+import Modal from '../Modal/Modal';
 import { selectIsLoggedIn } from '../../redux/auth/authSelectors';
 import { selectUser } from '../../redux/user/userSelectors';
-import { useModal } from 'hooks/useModal';
-import UserSetsModal from 'components/userSetsModal/UserSetsModal';
-import LogOutModal from 'components/LogOutModal/LogOutModal';
+import { useModal } from '../../hooks/useModal';
+import UserSetsModal from '../userSetsModal/UserSetsModal';
+import LogOutModal from '../LogOutModal/LogOutModal';
 import Logo from '../Logo/Logo';
 
 import {
@@ -41,22 +41,24 @@ import {
 } from './Header.Styled';
 
 const Header = () => {
-  const location = useLocation();
-  const isLoggedIn = useSelector(selectIsLoggedIn);
   const { name, avatarUrl } = useSelector(selectUser);
   const [isOpen, setIsOpen] = useState(false);
   const [hideOrShow, setHideOrShow] = useState({});
   const [hideOrShowList, setHideOrShowList] = useState({});
+  const location = useLocation();
+  const isLoggedIn = useSelector(selectIsLoggedIn);
   const [hideOrHeaderProfileSettings, setHideOrHeaderProfileSettings] =
     useState({});
-  const [isRotated, setIsRotated] = useState(false);
   const { isOpened, openModal, closeModal } = useModal();
   const [modal, setModal] = useState(null);
+  const [isRotated, setIsRotated] = useState(false);
 
   const openUserSetsModal = () => {
     setModal(<UserSetsModal closeModal={closeModal} />);
     openModal();
   };
+
+  //for log out modal
 
   const openLogOutModal = () => {
     setModal(
@@ -161,17 +163,17 @@ const Header = () => {
       <LinksContainer>
         <ExpensesLink
           to="/expenses"
+          state={{ from: location }}
           // onClick={() => handleSectionChange('expenses')}
           // className={activeSection === 'expenses' ? 'active' : ''}
-          state={{ from: location }}
         >
           All Expense
         </ExpensesLink>
         <IncomeLink
           to="/incomes"
+          state={{ from: location }}
           // onClick={() => handleSectionChange('incomes')}
           // className={activeSection === 'incomes' ? 'active' : ''}
-          state={{ from: location }}
         >
           All Income
         </IncomeLink>

@@ -2,13 +2,13 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from '../../redux/auth/authSelectors';
 import RegisterForm from 'components/RegisterForm/RegisterForm';
-import { TotalIncome } from '../../Utils/Total';
+// import { TotalIncome } from '../../Utils/Total';
 import BgImageWrapper from 'components/BgImageWrapper/BgImageWrapper';
 
 import { AdaptDiv, H2 } from 'pages/WelcomePage/WelcomePage.styled';
 import {
   PlugDivs,
-  TableDivs,
+  // TableDivs,
   Texts,
   WrapForm,
   WrapperS,
@@ -36,7 +36,7 @@ export default function Register() {
         <AdaptDiv>
           <WrapperS>
             <PlugDivs>
-              <TableDivs>{!isLoggedIn && <TotalIncome />}</TableDivs>
+              {/* <TableDivs>{!isLoggedIn && <TotalIncome />}</TableDivs> */}
               <BgImageWrapper />
             </PlugDivs>
             <WrapForm>

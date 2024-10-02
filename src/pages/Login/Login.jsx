@@ -1,18 +1,17 @@
 import { useSelector } from 'react-redux';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-import { TotalIncome } from '../../Utils/Total';
+// import { TotalIncome } from '../../Utils/Total';
 import { selectIsLoggedIn } from '../../redux/auth/authSelectors';
 import LoginForm from 'components/LoginForm/LoginForm';
 
 import { AdaptDiv, H2 } from 'pages/WelcomePage/WelcomePage.styled';
 import {
   PlugDivs,
-  TableDivs,
+  // TableDivs,
   Texts,
   WrapForm,
   WrapperS,
 } from 'pages/Register/Register.styled';
-// import { ImgAuth } from 'components/RegisterForm/RegisterForm.styled';
 
 import { Navigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -37,7 +36,7 @@ export default function Login() {
         <AdaptDiv>
           <WrapperS>
             <PlugDivs>
-              <TableDivs>{!isLoggedIn && <TotalIncome />}</TableDivs>
+              {/* <TableDivs>{!isLoggedIn && <TotalIncome />}</TableDivs> */}
               <BgImageWrapper />
             </PlugDivs>
             <WrapForm>

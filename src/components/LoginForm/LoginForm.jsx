@@ -118,9 +118,9 @@ export const LoginForm = () => {
         </WrapBts>
 
         <Line>
-          <p>New here?</p>
+          <p>New here? </p>
           <Link to={'/register'}>
-            <Spn>Create an account</Spn>{' '}
+            <Spn> Create an account</Spn>{' '}
           </Link>
         </Line>
       </WrapInp>

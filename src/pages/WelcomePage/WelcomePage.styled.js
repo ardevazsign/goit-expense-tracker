@@ -313,7 +313,7 @@ export const PlugDiv = styled.div`
 export const TableDiv = styled.div`
   position: absolute;
   top: 240px;
-  left: -10px;
+  left: 500px;
   width: 248px;
   height: 81px;
 

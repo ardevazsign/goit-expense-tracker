@@ -2,8 +2,9 @@ import { useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 import { selectIsLoggedIn } from '../../redux/auth/authSelectors';
 import WelcomeHome from 'components/WelcomeHome/WelcomeHome';
-import { TotalIncome } from '../../Utils/Total';
-import { AdaptDiv, PlugDiv, Wrapper, TableDiv } from './WelcomePage.styled';
+// import { TotalIncome } from '../../Utils/Total';
+import { AdaptDiv, PlugDiv, Wrapper } from './WelcomePage.styled';
+// TableDiv
 import BgImageWrapper from 'components/BgImageWrapper/BgImageWrapper';
 
 const WelcomePage = () => {
@@ -17,7 +18,7 @@ const WelcomePage = () => {
     <AdaptDiv>
       <Wrapper>
         <PlugDiv>
-          <TableDiv>{!isLoggedIn && <TotalIncome />}</TableDiv>
+          {/* <TableDiv>{!isLoggedIn && <TotalIncome />}</TableDiv> */}
           <BgImageWrapper />
         </PlugDiv>
         <div>

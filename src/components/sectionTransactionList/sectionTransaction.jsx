@@ -1,22 +1,17 @@
 import React from 'react';
-import {
-  SectionContainer,
-  CategoryTxt,
-  CommentTxt,
-  DateTxt,
-  TimeTxt,
-  SumTxt,
+//prettier-ignore
+import { TransSubContainer, TransactionsCategory, TransactionsComment, TransactionsDate, TransactionsTime, TransactionsSum,
 } from './sectionTransaction.styled';
 
 export const SectionTransaction = () => {
   return (
-    <SectionContainer>
-      <CategoryTxt>Category</CategoryTxt>
-      <CommentTxt>Comment</CommentTxt>
-      <DateTxt>Date</DateTxt>
-      <TimeTxt>Time</TimeTxt>
-      <SumTxt>Sum</SumTxt>
+    <TransSubContainer>
+      <TransactionsCategory>Category</TransactionsCategory>
+      <TransactionsComment>Comment</TransactionsComment>
+      <TransactionsDate>Date</TransactionsDate>
+      <TransactionsTime>Time</TransactionsTime>
+      <TransactionsSum>Sum</TransactionsSum>
       <p>Actions</p>
-    </SectionContainer>
+    </TransSubContainer>
   );
 };
