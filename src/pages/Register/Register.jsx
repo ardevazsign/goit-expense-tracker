@@ -13,7 +13,7 @@ import {
   WrapForm,
   WrapperS,
 } from './Register.styled';
-// import { ImgAuth } from 'components/RegisterForm/RegisterForm.styled';
+
 import { Navigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { selectUser } from '../../redux/user/userSelectors';

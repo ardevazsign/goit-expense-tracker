@@ -1,6 +1,6 @@
 import React from 'react';
 import AuthNav from '../AuthNav/AuthNav';
-import AllUsersTab from 'components/AllUsersTab/AllUsersTab';
+import AllUsersTab from '../AllUsersTab/AllUsersTab';
 
 import {
   WelcomeContent,
