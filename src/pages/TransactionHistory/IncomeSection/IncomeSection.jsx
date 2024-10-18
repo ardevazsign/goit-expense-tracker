@@ -12,7 +12,8 @@ import OperationForm from '../../../Utils/Operations/OperationForm';
 import { FramerMotion } from '../../../Utils/framer-motion';
 // Dependencies
 // Components
-import { TotalExpense, TotalIncome } from '../../../Utils/Total';
+import TotalExpense from '../../../Utils/Total/TotalExpense';
+import TotalIncome from '../../../Utils/Total/TotalIncome';
 import { SectionTransaction } from '../../../components/SectionTransactionList/SectionTransaction';
 import { TransactionsSearchTools } from '../../../components/TransactionsSearchTools/TransactionsSearchTools';
 // Redux

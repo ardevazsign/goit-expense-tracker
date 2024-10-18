@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { Suspense, lazy, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom/dist';
-import { useAuth } from '../hooks';
+import { useAuth } from '../hooks/useAuth';
 import { refreshThunk } from '../redux/auth/authOperations';
 import SharedLayout from './SharedLayout/SharedLayout';
 import Loader from './Loader/Loader';

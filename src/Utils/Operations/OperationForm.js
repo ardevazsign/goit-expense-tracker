@@ -3,14 +3,14 @@ import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import 'react-datepicker/dist/react-datepicker.css';
-import validationSchema from './validationSchema/validationSchema';
+import validationSchema from './validationSchema/validationSchema.js';
 import { yupResolver } from '@hookform/resolvers/yup';
 // Components
-import onSubmitTransaction from 'Utils/onSubmitTransaction/onSubmitTransaction';
-import PreSelectType from 'Utils/preSelectType/PreSelectType';
+import onSubmitTransaction from '../../Utils/onSubmitTransaction/onSubmitTransaction.js';
+import PreSelectType from '../../Utils/preSelectType/PreSelectType.js';
 // Form components
-import RadioBtn from 'components/transactionForm/radioBtn/RadioBtn';
-import DateInput from 'components/transactionForm/dateInput/DateInput';
+import RadioBtn from '../../components/transactionForm/radioBtn/RadioBtn.js';
+import DateInput from 'components/transactionForm/dateInput/DateInput.js';
 import CategoryInput from 'components/transactionForm/categoryInput/CategoryInput';
 import SumInput from 'components/transactionForm/sumInput/SumInput';
 import DescriptionInput from 'components/transactionForm/descriptionInput/DescriptionInput';
