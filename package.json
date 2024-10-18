@@ -2,7 +2,7 @@
   "name": "goit-expense-tracker",
   "private": true,
   "version": "0.1.0",
-  "homepage": "https://ardevazsign.github.io/goit-expense-tracker/",
+  "homepage": "https://ardevazsign.github.io/goit-expenses-tracker/",
   "dependencies": {
     "@babel/eslint-parser": "^7.25.8",
     "@hookform/resolvers": "^3.9.0",

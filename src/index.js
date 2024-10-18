@@ -12,7 +12,7 @@ import { GlobalStyles } from './styles/GlobalStyles';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <React.StrictMode>
-  <BrowserRouter basename="/goit-expense-tracker">
+  <BrowserRouter basename="/goit-expenses-tracker">
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <App />
