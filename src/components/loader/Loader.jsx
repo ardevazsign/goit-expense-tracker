@@ -1,10 +1,10 @@
 import React from 'react';
 import { ThreeCircles } from 'react-loader-spinner';
-import { StyledLoaderWrapper } from './Loader.styled';
+import { StyledLoaderHolder } from './Loader.styled';
 
 const Loader = () => {
   return (
-    <StyledLoaderWrapper>
+    <StyledLoaderHolder>
       <ThreeCircles
         visible={true}
         height="100"
@@ -14,7 +14,7 @@ const Loader = () => {
         wrapperStyle={{}}
         wrapperClass=""
       />
-    </StyledLoaderWrapper>
+    </StyledLoaderHolder>
   );
 };
 
