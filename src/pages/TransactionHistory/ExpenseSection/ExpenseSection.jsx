@@ -20,6 +20,7 @@ import TotalIncome from '../../../Utils/Total/TotalIncome';
 import { SectionTransaction } from '../../../components/SectionTransactionList/SectionTransaction';
 import { TransactionsSearchTools } from '../../../components/TransactionsSearchTools/TransactionsSearchTools';
 import { selectTransaction } from '../../../redux/transactions/transactionSelectors';
+// import Loader from 'components/Loader/Loader';
 
 // Styled-components
 import {
@@ -53,6 +54,7 @@ const ExpenseSection = () => {
 
   const { isOpened, openModal, closeModal } = useModal();
   const [editData, setEditData] = useState('');
+  // new
 
   // functions redux hooks
   const formattedDate = `${date.year}-${String(date.month).padStart(
@@ -61,8 +63,6 @@ const ExpenseSection = () => {
   )}-${String(date.day).padStart(2, '0')}`;
 
   useEffect(() => {
-    //
-    //
     dispatch(getTransactionsThunk({ type: 'expenses', date: formattedDate }));
   }, [dispatch, filter, formattedDate, date]);
 
