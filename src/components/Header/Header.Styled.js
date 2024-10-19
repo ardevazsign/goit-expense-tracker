@@ -2,33 +2,6 @@ import { motion } from 'framer-motion';
 import { Link, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-export const UnAuthorisedHeader = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #0c0d0d;
-  padding: 13px 20px;
-  color: white;
-  @media screen and (min-width: 1440px) {
-    padding: 18px 100px;
-  }
-`;
-
-export const HeaderAuthorised = styled(motion.div)`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #0c0d0d;
-  padding: 13px 20px;
-  color: white;
-  border-bottom: 1px solid rgba(250, 250, 250, 0.1);
-  @media screen and (max-width: 1439px) {
-    justify-content: space-between;
-  }
-  @media screen and (min-width: 1440px) {
-    padding: 18px 100px;
-  }
-`;
 export const MenuHeader = styled.div`
   display: flex;
   justify-content: space-between;
@@ -58,6 +31,35 @@ export const MobileMenu = styled.div`
     display: none !important;
   }
 `;
+
+export const UnAuthorisedHeader = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0c0d0d;
+  padding: 13px 20px;
+  color: white;
+  @media screen and (min-width: 1440px) {
+    padding: 18px 100px;
+  }
+`;
+
+export const HeaderAuthorised = styled(motion.div)`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0c0d0d;
+  padding: 13px 20px;
+  color: white;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.1);
+  @media screen and (max-width: 1439px) {
+    justify-content: space-between;
+  }
+  @media screen and (min-width: 1440px) {
+    padding: 18px 100px;
+  }
+`;
+
 export const MenuMain = styled.div`
   display: flex;
   flex-direction: column;
